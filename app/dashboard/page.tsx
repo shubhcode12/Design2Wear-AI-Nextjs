@@ -265,6 +265,7 @@ const Page = () => {
                   value={color}
                   isSelected={selected.color === color.toLowerCase()}
                   onClick={() => handleChipSelect("color", color.toLowerCase())}
+                  aria-label={`Select ${color}`}
                 />
               ))}
             </div>
@@ -281,6 +282,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("skintone", skintone.toLowerCase())
                   }
+                  aria-label={`Select ${skintone}`}
                 />
               ))}
             </div>
@@ -297,6 +299,7 @@ const Page = () => {
                   value={style}
                   isSelected={selected.style === style.toLowerCase()}
                   onClick={() => handleChipSelect("style", style.toLowerCase())}
+                  aria-label={`Select ${style}`}
                 />
               ))}
             </div>
@@ -321,6 +324,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("occasion", occasion.toLowerCase())
                   }
+                  aria-label={`Select ${occasion}`}
                 />
               ))}
             </div>
@@ -339,6 +343,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("category", category.toLowerCase())
                   }
+                  aria-label={`Select ${category}`}
                 />
               ))}
             </div>
@@ -355,6 +360,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("gender", gender.toLowerCase())
                   }
+                  aria-label={`Select ${gender}`}
                 />
               ))}
             </div>
@@ -373,6 +379,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("season", season.toLowerCase())
                   }
+                  aria-label={`Select ${season}`}
                 />
               ))}
             </div>
@@ -387,6 +394,7 @@ const Page = () => {
                   value={age}
                   isSelected={selected.age === age.toLowerCase()}
                   onClick={() => handleChipSelect("age", age.toLowerCase())}
+                  aria-label={`Select ${age}`}
                 />
               ))}
             </div>
@@ -405,6 +413,7 @@ const Page = () => {
                   onClick={() =>
                     handleChipSelect("haircolor", haircolor.toLowerCase())
                   }
+                  aria-label={`Select ${haircolor}`}
                 />
               ))}
             </div>
