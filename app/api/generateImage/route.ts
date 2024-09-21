@@ -10,7 +10,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<Response> {
   const PROJECT_MODE = process.env.PROJECT_MODE;
   
   try {
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       const storageRef = ref(storage, `images/${imageName}`);      
       const uploadTask = uploadBytesResumable(storageRef, response.data);
 
-      return new Promise((resolve, reject) => {
+      return new Promise<Response>((resolve, reject) => {
         uploadTask.on(
           "state_changed",
           (snapshot) => {
