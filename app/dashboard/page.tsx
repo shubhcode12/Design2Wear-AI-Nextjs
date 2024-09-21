@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { title } from "@/components/primitives";
-import confetti from "canvas-confetti";
+//import confetti from "canvas-confetti";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/config/firebase-config";
@@ -71,35 +71,35 @@ const Page = () => {
     });
   };
 
-  const handleConfettiClick = () => {
-    const end = Date.now() + 3 * 1000; // 3 seconds
-    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+  // const handleConfettiClick = () => {
+  //   const end = Date.now() + 3 * 1000; // 3 seconds
+  //   const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
-    const frame = () => {
-      if (Date.now() > end) return;
+  //   const frame = () => {
+  //     if (Date.now() > end) return;
 
-      confetti({
-        particleCount: 2,
-        angle: 60,
-        spread: 55,
-        startVelocity: 60,
-        origin: { x: 0, y: 0.5 },
-        colors: colors,
-      });
-      confetti({
-        particleCount: 2,
-        angle: 120,
-        spread: 55,
-        startVelocity: 60,
-        origin: { x: 1, y: 0.5 },
-        colors: colors,
-      });
+  //     confetti({
+  //       particleCount: 2,
+  //       angle: 60,
+  //       spread: 55,
+  //       startVelocity: 60,
+  //       origin: { x: 0, y: 0.5 },
+  //       colors: colors,
+  //     });
+  //     confetti({
+  //       particleCount: 2,
+  //       angle: 120,
+  //       spread: 55,
+  //       startVelocity: 60,
+  //       origin: { x: 1, y: 0.5 },
+  //       colors: colors,
+  //     });
 
-      requestAnimationFrame(frame);
-    };
+  //     requestAnimationFrame(frame);
+  //   };
 
-    frame();
-  };
+  //   frame();
+  // };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,7 +155,7 @@ const Page = () => {
             console.error("Error adding user to database:", error);
           });
         setLoading(false);
-        handleConfettiClick();
+        //handleConfettiClick();
         const imageContainer = document.getElementById("image-container");
         if (imageContainer) {
           imageContainer.scrollIntoView({ behavior: "smooth" });
