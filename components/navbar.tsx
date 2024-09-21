@@ -86,15 +86,20 @@ export const Navbar = () => {
 
           {user && (
             <div className="relative">
-              <img
-                className="w-10 h-10 p-1 rounded-full ring-2 cursor-pointer ring-gray-300 dark:ring-gray-500"
-                src={auth.currentUser?.photoURL || ""}
-                alt="User avatar"
+              <button
+                className="p-0 border-none bg-transparent"
                 onClick={() => {
                   const dropdown = document.getElementById("userDropdown");
                   if (dropdown) dropdown.classList.toggle("hidden");
                 }}
-              />
+                aria-label="Toggle user menu"
+              >
+                <img
+                  className="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+                  src={auth.currentUser?.photoURL || ""}
+                  alt="User avatar"
+                />
+              </button>
 
               <div
                 id="userDropdown"
@@ -107,11 +112,11 @@ export const Navbar = () => {
                 </div>
 
                 <div className="py-1">
-                  <a
+                  <button
                     onClick={handleSignOut}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer">
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer">
                     Sign out
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
