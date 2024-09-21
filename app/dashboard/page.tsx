@@ -467,7 +467,7 @@ const Page = () => {
               <p>No outfits in your collection yet.</p>
             ) : (
               collection.map((item: any) => (
-                <div className="relative p-1 rounded-lg group">
+                <div key={item.id} className="relative p-1 rounded-lg group">
                   <img
                     src={item.imageUrl}
                     alt="Outfit"
