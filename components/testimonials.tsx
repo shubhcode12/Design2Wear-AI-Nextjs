@@ -5,7 +5,7 @@ const Testimonials = () => {
       name: "Angela stian",
       title: "Fashion Designer",
       quote:
-        "Design2Wear AI has been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. It's so easy and convenient!",
+        "Design2Wear AI has been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. Its so easy and convenient!",
     },
     {
       avatar:
@@ -13,7 +13,7 @@ const Testimonials = () => {
       name: "Jurica koletic",
       title: "Fashion Designer",
       quote:
-        "I've been using Design2Wear AI for a few months now, and it's been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. It's so easy and convenient!",
+        "Ive been using Design2Wear AI for a few months now, and its been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. Its so easy and convenient!",
     },
     {
       avatar:
@@ -21,7 +21,7 @@ const Testimonials = () => {
       name: "Kavi laron",
       title: "Fashion Designer",
       quote:
-        "Design2Wear AI has been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. It's so easy and convenient!",
+        "Design2Wear AI has been a game-changer for me. I used to spend hours trying to figure out what to wear, but now I can just ask the AI and it gives me a personalized outfit recommendation. Its so easy and convenient!",
     },
   ];
 
@@ -35,7 +35,7 @@ const Testimonials = () => {
           </h1>
           <h1 className="text-lg lg:text-xl font-normal z-10 relative max-w-[600px] text-center flex mx-auto justify-center items-center text-gray-500 mt-2">
             Discover why our users love our product. Read their experiences and
-            see how we've helped them achieve their goals.
+            see how we have helped them achieve their goals.
           </h1>
         </div>
         <div className="mt-12">

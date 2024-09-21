@@ -451,7 +451,7 @@ const Page = () => {
         <div className="">
           <h1 className="text-2xl font-bold">My Collection</h1>
           <p className="text-sm text-gray-500">
-            Explore the outfits you've created with Design2Wear AI
+            Explore the outfits you have created with Design2Wear AI
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
             {collection.length === 0 ? (
