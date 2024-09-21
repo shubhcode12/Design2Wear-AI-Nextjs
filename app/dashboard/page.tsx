@@ -245,10 +245,10 @@ const Page = () => {
 
         <div className="flex flex-wrap gap-4 p-4 overflow-hidden">
           <div className="p-4">
-            <label id="colorLabel" className="text-xl font-bold">
+            <label htmlFor="colorSelect" className="text-xl font-bold">
               What is your color preference?
             </label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="colorLabel">
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="colorSelect" role="group" aria-labelledby="colorLabel">
               {[
                 "White",
                 "Black",
@@ -272,8 +272,8 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="skintoneLabel" className="text-xl font-bold">What is your skintone?</label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="skintoneLabel">
+            <label htmlFor="skintoneSelect" className="text-xl font-bold">What is your skintone?</label>
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="skintoneSelect" role="group" aria-labelledby="skintoneLabel">
               {["Light", "Medium", "Dark"].map((skintone) => (
                 <Chip
                   key={skintone}
@@ -289,10 +289,10 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="styleLabel" className="text-xl font-bold">
+            <label htmlFor="styleSelect" className="text-xl font-bold">
               What is your style preference?
             </label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="styleLabel">
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="styleSelect" role="group" aria-labelledby="styleLabel">
               {["Casual", "Formal", "Sport", "Travel"].map((style) => (
                 <Chip
                   key={style}
@@ -306,8 +306,8 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="occasionLabel" className="text-xl font-bold">What is your occasion?</label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="occasionLabel">
+            <label htmlFor="occasionSelect" className="text-xl font-bold">What is your occasion?</label>
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="occasionSelect" role="group" aria-labelledby="occasionLabel">
               {[
                 "Birthday",
                 "Anniversary",
@@ -331,10 +331,10 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="categoryLabel" className="text-xl font-bold">
+            <label htmlFor="categorySelect" className="text-xl font-bold">
               Select your outfit category
             </label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="categoryLabel">
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="categorySelect" role="group" aria-labelledby="categoryLabel">
               {["Top", "Bottom", "Dress", "Pants", "Shorts"].map((category) => (
                 <Chip
                   key={category}
@@ -350,8 +350,8 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="genderLabel" className="text-xl font-bold">What is your gender?</label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="genderLabel">
+            <label htmlFor="genderSelect" className="text-xl font-bold">What is your gender?</label>
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="genderSelect" role="group" aria-labelledby="genderLabel">
               {["Male", "Female", "Unisex"].map((gender) => (
                 <Chip
                   key={gender}
@@ -367,10 +367,10 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="seasonLabel" className="text-xl font-bold">
+            <label htmlFor="seasonSelect" className="text-xl font-bold">
               What is your season preference?
             </label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="seasonLabel">
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="seasonSelect" role="group" aria-labelledby="seasonLabel">
               {["Spring", "Summer", "Fall", "Winter"].map((season) => (
                 <Chip
                   key={season}
@@ -386,8 +386,8 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="ageLabel" className="text-xl font-bold">What is your age?</label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="ageLabel">
+            <label htmlFor="ageSelect" className="text-xl font-bold">What is your age?</label>
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="ageSelect" role="group" aria-labelledby="ageLabel">
               {["18-25", "26-35", "36-45", "46-55", "56+"].map((age) => (
                 <Chip
                   key={age}
@@ -401,10 +401,10 @@ const Page = () => {
           </div>
 
           <div className="p-4">
-            <label id="haircolorLabel" className="text-xl font-bold">
+            <label htmlFor="haircolorSelect" className="text-xl font-bold">
               What is your hair color?
             </label>
-            <div className="flex overflow-x-scroll pb-2 pt-4" aria-labelledby="haircolorLabel">
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="haircolorSelect" role="group" aria-labelledby="haircolorLabel">
               {["Black", "Brown", "Blonde", "Red", "White"].map((haircolor) => (
                 <Chip
                   key={haircolor}
