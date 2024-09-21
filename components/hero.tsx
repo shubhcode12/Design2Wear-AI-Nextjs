@@ -49,7 +49,7 @@ export default function Hero() {
             <Marquee className="w-full" gap={0}>
             {heroImages.map((image, index) => (
               <div key={index}>
-                <img src={image} className="w-80 h-80 object-contain border-2 border-gray-500 rounded-xl" alt={`Image ${index + 1}`} />
+                <img src={image} className="w-80 h-80 object-contain border-2 border-gray-500 rounded-xl" alt="" />
               </div>
             ))}
             </Marquee>
