@@ -243,8 +243,8 @@ const Page = () => {
           />
         </div>
 
-        <div className="flex flex-wrap gap-4 p-4 overflow-hidden">
-          <div className="p-4">
+        <div className="flex flex-wrap gap-4 p-0">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="colorSelect" className="text-xl font-bold">
               What is your color preference?
             </label>
@@ -271,7 +271,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="skintoneSelect" className="text-xl font-bold">What is your skintone?</label>
             <div className="flex overflow-x-scroll pb-2 pt-4" id="skintoneSelect" role="group" aria-labelledby="skintoneLabel">
               {["Light", "Medium", "Dark"].map((skintone) => (
@@ -288,7 +288,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="styleSelect" className="text-xl font-bold">
               What is your style preference?
             </label>
@@ -305,7 +305,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="occasionSelect" className="text-xl font-bold">What is your occasion?</label>
             <div className="flex overflow-x-scroll pb-2 pt-4" id="occasionSelect" role="group" aria-labelledby="occasionLabel">
               {[
@@ -330,7 +330,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="categorySelect" className="text-xl font-bold">
               Select your outfit category
             </label>
@@ -349,7 +349,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="genderSelect" className="text-xl font-bold">What is your gender?</label>
             <div className="flex overflow-x-scroll pb-2 pt-4" id="genderSelect" role="group" aria-labelledby="genderLabel">
               {["Male", "Female", "Unisex"].map((gender) => (
@@ -366,7 +366,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="seasonSelect" className="text-xl font-bold">
               What is your season preference?
             </label>
@@ -385,7 +385,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="ageSelect" className="text-xl font-bold">What is your age?</label>
             <div className="flex overflow-x-scroll pb-2 pt-4" id="ageSelect" role="group" aria-labelledby="ageLabel">
               {["18-25", "26-35", "36-45", "46-55", "56+"].map((age) => (
@@ -400,7 +400,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="p-4">
+          <div className="p-4 overflow-scroll">
             <label htmlFor="haircolorSelect" className="text-xl font-bold">
               What is your hair color?
             </label>
