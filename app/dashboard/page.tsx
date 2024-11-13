@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { title } from "@/components/primitives";
-//import confetti from "canvas-confetti";
+import confetti from "canvas-confetti";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/config/firebase-config";
@@ -10,6 +10,7 @@ import { getDatabase, ref, set, push, get } from "firebase/database";
 import { getCollection } from "@/firebase/network";
 import { ArrowCircleDown2, Eye } from "iconsax-react";
 import { siteConfig } from "@/config/site";
+
 
 interface FormInputs {
   color: string;
@@ -21,7 +22,8 @@ interface FormInputs {
   style: string;
   pattern: string;
   skintone: string;
-  haircolor: string;
+  fabric : string;
+  size: string;
   customInput: string;
 }
 
@@ -41,7 +43,8 @@ const Page = () => {
     style: "",
     pattern: "",
     skintone: "",
-    haircolor: "",
+    fabric : "",
+    size: "",
     customInput: "",
   });
 
@@ -57,7 +60,7 @@ const Page = () => {
     gender: "",
     style: "",
     skintone: "",
-    haircolor: "",
+    fabric : ""
   });
 
   const handleChipSelect = (field: keyof FormInputs, value: string) => {
@@ -71,35 +74,28 @@ const Page = () => {
     });
   };
 
-  // const handleConfettiClick = () => {
-  //   const end = Date.now() + 3 * 1000; // 3 seconds
-  //   const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+  const handleConfettiClick = () => {
+    const end = Date.now() + 3 * 1000; // 3 seconds
+    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
-  //   const frame = () => {
-  //     if (Date.now() > end) return;
+    const frame = () => {
+      if (Date.now() > end) return;
 
-  //     confetti({
-  //       particleCount: 2,
-  //       angle: 60,
-  //       spread: 55,
-  //       startVelocity: 60,
-  //       origin: { x: 0, y: 0.5 },
-  //       colors: colors,
-  //     });
-  //     confetti({
-  //       particleCount: 2,
-  //       angle: 120,
-  //       spread: 55,
-  //       startVelocity: 60,
-  //       origin: { x: 1, y: 0.5 },
-  //       colors: colors,
-  //     });
+     
+      confetti({
+       particleCount: 2,
+       angle: 120,
+       spread: 55,
+      startVelocity: 60,
+      origin: { x: 1, y: 0.5 },
+      colors: colors,
+      });
 
-  //     requestAnimationFrame(frame);
-  //   };
+      requestAnimationFrame(frame);
+    };
 
-  //   frame();
-  // };
+    frame();
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -113,7 +109,8 @@ const Page = () => {
       category,
       style,
       skintone,
-      haircolor,
+      fabric,
+      size,
       customInput,
     } = formInputs;
 
@@ -126,7 +123,8 @@ const Page = () => {
       Category: ${category}, 
       Style: ${style}, 
       Skintone: ${skintone}, 
-      Haircolor: ${haircolor}, 
+      Fabric : ${fabric},
+      Outfit Size: ${size}, 
       Custom Input: ${customInput}`;
 
     console.log(prompt);
@@ -155,7 +153,7 @@ const Page = () => {
             console.error("Error adding user to database:", error);
           });
         setLoading(false);
-        //handleConfettiClick();
+        handleConfettiClick();
         const imageContainer = document.getElementById("image-container");
         if (imageContainer) {
           imageContainer.scrollIntoView({ behavior: "smooth" });
@@ -402,18 +400,37 @@ const Page = () => {
 
           <div className="p-4 overflow-scroll">
             <label htmlFor="haircolorSelect" className="text-xl font-bold">
-              What is your hair color?
+              Select your fabric preferance
             </label>
             <div className="flex overflow-x-scroll pb-2 pt-4" id="haircolorSelect" role="group" aria-labelledby="haircolorLabel">
-              {["Black", "Brown", "Blonde", "Red", "White"].map((haircolor) => (
+              {["cotton", "silk", "polyster"].map((fabric) => (
                 <Chip
-                  key={haircolor}
-                  value={haircolor}
-                  isSelected={selected.haircolor === haircolor.toLowerCase()}
+                  key={fabric}
+                  value={fabric}
+                  isSelected={selected.fabric === fabric.toLowerCase()}
                   onClick={() =>
-                    handleChipSelect("haircolor", haircolor.toLowerCase())
+                    handleChipSelect("fabric", fabric.toLowerCase())
                   }
-                  aria-label={`Select ${haircolor}`}
+                  aria-label={`Select ${fabric}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="p-4 overflow-scroll">
+            <label htmlFor="haircolorSelect" className="text-xl font-bold">
+              What is your outfit size?
+            </label>
+            <div className="flex overflow-x-scroll pb-2 pt-4" id="haircolorSelect" role="group" aria-labelledby="haircolorLabel">
+              {["xs", "s", "m", "l", "xl","xxl"].map((size) => (
+                <Chip
+                  key={size}
+                  value={size}
+                  isSelected={selected.size === size.toLowerCase()}
+                  onClick={() =>
+                    handleChipSelect("size", size.toLowerCase())
+                  }
+                  aria-label={`Select ${size}`}
                 />
               ))}
             </div>

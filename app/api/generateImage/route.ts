@@ -18,11 +18,11 @@ export async function POST(req: Request): Promise<Response> {
 
     const payload = { prompt: prompt, output_format: "jpeg" };
 
-    if(PROJECT_MODE === "development") {
-      return NextResponse.json({ success: true, imagePath: "https://firebasestorage.googleapis.com/v0/b/design2wear-b59c5.appspot.com/o/images%2F1726587634460.jpeg?alt=media&token=30bf49d0-9d0e-4d81-9f13-e2c294ade2ad" });
-    }
+    //if(PROJECT_MODE === "development") {
+    //  return NextResponse.json({ success: true, imagePath: "https://firebasestorage.googleapis.com/v0/b/design2wear-b59c5.appspot.com/o/images%2F1726587634460.jpeg?alt=media&token=30bf49d0-9d0e-4d81-9f13-e2c294ade2ad" });
+    //}
 
-
+// network library
     const response = await axios.postForm(
       `https://api.stability.ai/v2beta/stable-image/generate/core`,
       axios.toFormData(payload, new FormData()),
@@ -30,7 +30,7 @@ export async function POST(req: Request): Promise<Response> {
         validateStatus: undefined,
         responseType: "arraybuffer",
         headers: {
-          Authorization: `Bearer ${process.env.STABILITY_API_KEY}`,
+          Authorization: `Bearer sk-voPzQIoDoFG1M4clAIX9uFzgnp7dBgh5hlqZFOAVEzASiFua`,
           Accept: "image/*",
         },
       }
