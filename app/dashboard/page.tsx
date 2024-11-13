@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { title } from "@/components/primitives";
-import confetti from "canvas-confetti";
+//import confetti from "canvas-confetti";
 import { useRouter } from "next/navigation";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/config/firebase-config";
@@ -82,14 +82,14 @@ const Page = () => {
       if (Date.now() > end) return;
 
      
-      confetti({
-       particleCount: 2,
-       angle: 120,
-       spread: 55,
-      startVelocity: 60,
-      origin: { x: 1, y: 0.5 },
-      colors: colors,
-      });
+      // confetti({
+      //  particleCount: 2,
+      //  angle: 120,
+      //  spread: 55,
+      // startVelocity: 60,
+      // origin: { x: 1, y: 0.5 },
+      // colors: colors,
+      // });
 
       requestAnimationFrame(frame);
     };
